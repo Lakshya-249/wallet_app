@@ -1,8 +1,10 @@
 import { Request, Response } from "express";
 import { Address, Price } from "../Models/schema";
 import axios from "axios";
-import { loadEnvFile } from "process";
-loadEnvFile();
+// import { loadEnvFile } from "process";
+import "dotenv/config";
+require("dotenv").config();
+// loadEnvFile();
 
 const api_key = process.env.SECRET_API_KEY;
 

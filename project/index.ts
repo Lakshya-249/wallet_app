@@ -2,9 +2,11 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import router from "./router";
-import { loadEnvFile } from "process";
+// import { loadEnvFile } from "process";
 import startPriceFetchingService from "./ethereum_price_fetcher";
-loadEnvFile();
+import "dotenv/config";
+require("dotenv").config();
+// loadEnvFile();
 
 mongoose
   .connect(process.env.MONGODB_URL as string)
